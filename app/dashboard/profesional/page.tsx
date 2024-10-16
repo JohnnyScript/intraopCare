@@ -29,7 +29,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ChevronDown, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Fingerprint,
+  Search,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -63,14 +69,47 @@ export default function HealthcareDashboard() {
     indexOfLastPatient
   );
 
+  const [openModalFingerprint, setOpenModalFingerprint] = React.useState(false);
+
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <>
       <div className="space-y-8">
-        <h1 className="text-3xl font-bold text-blue-800">
-          Dashboard Profesional
-        </h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-blue-800">
+            Dashboard Profesional
+          </h1>
+          <Dialog
+            open={openModalFingerprint}
+            onOpenChange={(v) => {
+              setOpenModalFingerprint(v);
+            }}
+          >
+            <DialogTrigger asChild>
+              <Button variant="outline">
+                <Fingerprint className="mr-2 h-4 w-4" /> Consulta con huella
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[550px]">
+              <DialogHeader>
+                <DialogTitle>Coloque la huella del paciente </DialogTitle>
+              </DialogHeader>
+              <div className="w-full h-[400px] flex flex-col justify-center items-center ">
+                <Fingerprint className="mr-2 !h-40 !w-40" />
+                <Button
+                  variant="outline"
+                  className="mt-4"
+                  onClick={() => {
+                    setSelectedPatient(patients[0]);
+                  }}
+                >
+                  Escanear
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
 
         <Card>
           <CardHeader>
