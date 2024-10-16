@@ -142,7 +142,7 @@ export default function HealthcareDashboard() {
                             Consultar
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="sm:max-w-[425px]">
+                        <DialogContent className="sm:max-w-[550px]">
                           <DialogHeader>
                             <DialogTitle>Información del Paciente</DialogTitle>
                             <DialogDescription>
@@ -151,96 +151,96 @@ export default function HealthcareDashboard() {
                           </DialogHeader>
                           {selectedPatient && (
                             <div className="grid gap-4 py-4">
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   DNI:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.dni}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Nombre:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.nombre}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Edad:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.edad} años
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Sexo:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.sexo}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Grupo Sanguíneo:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.grupoSanguineo}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Acepta Donación:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.aceptaDonacion ? "Sí" : "No"}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Ciudad de Origen:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.ciudadOrigen}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Ciudad de Residencia:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.ciudadResidencia}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Número Telefónico:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.numeroTelefono}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Número Telefónico Familiar:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.numeroTelefonoFamiliar}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   EPS:
                                 </label>
                                 <span className="col-span-3">
                                   {selectedPatient.eps}
                                 </span>
                               </div>
-                              <div className="grid grid-cols-4 items-center gap-4">
-                                <label className="text-right font-bold">
+                              <div className="grid grid-cols-4 items-center gap-2">
+                                <label className="font-bold text-left mr-2">
                                   Enfermedades:
                                 </label>
                                 <span className="col-span-3">
@@ -248,8 +248,8 @@ export default function HealthcareDashboard() {
                                 </span>
                               </div>
                               {!selectedPatient.aceptaDonacion && (
-                                <div className="grid grid-cols-4 items-center gap-4">
-                                  <label className="text-right font-bold">
+                                <div className="grid grid-cols-4 items-center gap-2">
+                                  <label className="font-bold text-left mr-2">
                                     Razón No Transfusional:
                                   </label>
                                   <span className="col-span-3">
